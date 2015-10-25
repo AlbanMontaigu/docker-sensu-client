@@ -34,7 +34,7 @@ ADD ./sensu/config.json /tmp/sensu/config.json
 ADD ./sensu/client.json /tmp/sensu/conf.d/client.json
 
 # Sensu need to be root to execute docker commands
-sed -i -e "s%USER=sensu%USER=root%g" /etc/init.d/sensu-service
+RUN sed -i -e "s%USER=sensu%USER=root%g" /etc/init.d/sensu-service
 
 # Entrypoint setting
 ADD ./docker-entrypoint.sh /docker-entrypoint.sh
