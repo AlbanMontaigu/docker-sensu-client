@@ -21,7 +21,7 @@ ENV DOCKER_BUCKET="get.docker.com" \
 
 # System install required system components
 RUN apt-get update \
-    && apt-get -y install netcat curl \
+    && apt-get -y install netcat-openbsd curl \
     && rm -r /var/lib/apt/lists/*
 
 # Adds docker client
