@@ -21,7 +21,7 @@ ENV DOCKER_BUCKET="get.docker.com" \
 
 # System install required system components
 RUN apt-get update \
-    && yum -y install nc \
+    && apt-get -y install netcat \
     && rm -r /var/lib/apt/lists/*
 
 # Adds docker client
