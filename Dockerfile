@@ -20,7 +20,7 @@ ENV DOCKER_VERSION="1.12.2"
 # System install required system components
 RUN apt-get update \
     && apt-get -y install netcat-openbsd curl \
-    && rm -r /var/lib/apt/lists/*
+    && rm -r /var/lib/apt/lists/* \
 
 # Install docker bin for client commands (will be connected to docker host daemon)
     && curl -fSL "https://get.docker.com/builds/Linux/x86_64/docker-${DOCKER_VERSION}.tgz" -o docker.tgz \
